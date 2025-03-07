@@ -38,6 +38,14 @@ return [
             Controller\IndexController::class => InvokableFactory::class,
         ],
     ],
+    'view_helpers' => [
+        'factories' => [
+            \Application\View\Helper\InertiaHelper::class => \Laminas\ServiceManager\Factory\InvokableFactory::class,
+        ],
+        'aliases' => [
+            'inertia' => \Application\View\Helper\InertiaHelper::class,
+        ],
+    ],
     'view_manager' => [
         'display_not_found_reason' => true,
         'display_exceptions'       => true,

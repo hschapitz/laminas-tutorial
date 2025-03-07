@@ -25,6 +25,25 @@
 
         <!-- Scripts -->
         <?= $this->headScript() ?>
+
+        <?php
+        $entrypoints = json_decode(file_get_contents(__DIR__ . '/../../../../public/build/entrypoints.json'), true);
+        foreach($entrypoints as $entrypoint) {
+            if(isset($entrypoint["app"]["js"])) {
+                foreach ($entrypoint["app"]["js"] as $file) {
+                    $this->headScript()->appendFile($file , 'text/javascript', ['defer' => true]);
+                }
+            }
+        if(isset($entrypoint["app"]["css"])) {
+            foreach ($entrypoint["app"]["css"] as $file) {
+                $this->headlink()->appendStylesheet($file);
+            }
+        }
+
+            echo $this->headlink();
+            echo $this->headScript();
+        }
+        ?>
     </head>
     <body>
         <nav class="navbar navbar-expand-md navbar-dark mb-4" role="navigation">

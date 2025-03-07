@@ -28,5 +28,13 @@ services:
       MYSQL_USER: docker
       MYSQL_PASSWORD: docker
 
+
+  node:
+    container_name: node
+    image: node:22
+    tty: true
+    volumes:
+      - .:/var/www/html
+
 volumes:
   albums-db:
