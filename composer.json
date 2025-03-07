@@ -10,7 +10,7 @@
     "framework"
   ],
   "require": {
-    "php": "^7.4",
+    "php": "~8.0.0",
     "laminas/laminas-component-installer": "^1.0 || ^2.1",
     "laminas/laminas-development-mode": "^3.2",
     "laminas/laminas-mvc": "^3.1.1",
@@ -53,7 +53,7 @@
     "test": "phpunit"
   },
   "require-dev": {
-    "laminas/laminas-test": "^3.4",
+    "laminas/laminas-test": "^4",
     "phpunit/phpunit": "^9.2",
     "phpspec/prophecy-phpunit": "^2.0"
   },
