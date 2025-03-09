@@ -5,9 +5,10 @@ Encore
     .setPublicPath('/build')
     .addEntry('app', './assets/js/app.js')
     .enableVueLoader()
-    .enableSassLoader()  // Optional, wenn du Sass verwendest
+    .enableSassLoader()
     .enableSourceMaps(!Encore.isProduction())
     .enableVersioning(Encore.isProduction())
-    .enableSingleRuntimeChunk();  // Füge diese Zeile hinzu
+    .enableSingleRuntimeChunk()
+    .cleanupOutputBeforeBuild();
 
 module.exports = Encore.getWebpackConfig();

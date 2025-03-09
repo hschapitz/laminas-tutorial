@@ -1,18 +1,18 @@
 <template>
   <div>
     <h1>{{ message }}</h1>  <!-- Nachricht wird angezeigt -->
-    <inertia-link href="/about">About</inertia-link>
+    <Link href="/about">About</Link>
   </div>
 </template>
 
 <script>
-import { InertiaLink } from '@inertiajs/inertia-vue3';
+import { Link } from '@inertiajs/vue3';
 export default {
   props: {
     message: String,
   },
   components: {
-    InertiaLink,
+    Link,
   },
 }
 </script>
