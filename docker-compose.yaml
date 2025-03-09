@@ -1,8 +1,8 @@
 services:
-  albums-app:
+  php:
     build:
       context: "docker/php"
-    container_name: albums-app
+    container_name: php
     restart: always
     volumes:
       - .:/var/www/html

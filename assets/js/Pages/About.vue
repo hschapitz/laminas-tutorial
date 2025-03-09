@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1>{{ message }}</h1>  <!-- Nachricht wird angezeigt -->
-    <inertia-link href="/about">About</inertia-link>
+    <h2>{{ message }}</h2>  <!-- Nachricht wird angezeigt -->
+    <inertia-link href="/">home</inertia-link>
   </div>
 </template>
 

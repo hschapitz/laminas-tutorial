@@ -30,11 +30,22 @@ return [
                     ],
                 ],
             ],
+            'about' => [
+                'type'    => Segment::class,
+                'options' => [
+                    'route'    => '/about',
+                    'defaults' => [
+                        'controller' => Controller\AboutController::class,
+                        'action'     => 'index',
+                    ],
+                ],
+            ],
         ],
     ],
     'controllers' => [
         'factories' => [
-            Controller\IndexController::class => Controller\IndexControllerFactory::class
+            Controller\IndexController::class => Controller\IndexControllerFactory::class,
+            Controller\AboutController::class => Controller\AboutControllerFactory::class,
         ],
     ],
     'view_helpers' => [
@@ -60,5 +71,9 @@ return [
         'template_path_stack' => [
             __DIR__ . '/../view',
         ],
+        'strategies' => [
+            'ViewJsonStrategy',
+
+        ]
     ],
 ];
