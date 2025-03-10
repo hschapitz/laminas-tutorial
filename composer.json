@@ -28,15 +28,12 @@
   "autoload": {
     "psr-4": {
       "Application\\": "module/Application/src/",
-      "Album\\": "module/Album/src/",
-      "Blog\\": "module/Blog/src/",
-      "User\\": "module/User/src/"
+      "LaminasInertiaJs\\": "module/LaminasInertiaJs/src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "ApplicationTest\\": "module/Application/test/",
-      "AlbumTest\\": "module/Album/test/"
+      "ApplicationTest\\": "module/Application/test/"
     }
   },
   "scripts": {

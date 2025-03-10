@@ -4,25 +4,14 @@ declare(strict_types=1);
 
 namespace Application\Controller;
 
-use Laminas\Http\Header\GenericHeader;
 use Laminas\Mvc\Controller\AbstractActionController;
-use Laminas\View\Model\JsonModel;
-use Laminas\View\Model\ViewModel;
+use LaminasInertiaJs\Model\InertiaModel;
 
 class AboutController extends AbstractActionController
 {
     public function indexAction()
     {
-        $view = new ViewModel();
-        /** @var ?GenericHeader $inertiaHeader */
-        $inertiaHeader = $this->getRequest()->getHeaders()->get('X-Inertia');
-        if ($inertiaHeader instanceof GenericHeader && $inertiaHeader->getFieldValue() == 'true') {
-            $this->getResponse()->getHeaders()->addHeader(new GenericHeader('X-Inertia', true));
-
-            $view = new JsonModel();
-            $view->setTerminal(true);
-        }
-
+        $view = new InertiaModel();
 
         $view->setVariables([
             'component' => 'About',

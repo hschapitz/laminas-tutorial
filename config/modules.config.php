@@ -8,5 +8,6 @@
 return [
     'Laminas\Router',
     'Laminas\Validator',
+    'LaminasInertiaJs',
     'Application',
 ];
