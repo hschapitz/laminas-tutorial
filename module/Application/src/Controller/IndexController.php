@@ -12,14 +12,8 @@ class IndexController extends AbstractActionController
     public function indexAction()
     {
         $view = new InertiaModel();
-
-
         $view->setVariables([
-            'component' => 'Home',
-            'props' => [
-                'message' => 'Welcome',
-            ],
-            'url' => $_SERVER['REQUEST_URI'],
+            'message' => 'Welcome',
         ]);
 
         return $view;

@@ -14,11 +14,7 @@ class AboutController extends AbstractActionController
         $view = new InertiaModel();
 
         $view->setVariables([
-            'component' => 'About',
-            'props' => [
-                'message' => 'test msg',
-            ],
-            'url' => $_SERVER['REQUEST_URI'],
+            'message' => 'test msg',
         ]);
 
         return $view;

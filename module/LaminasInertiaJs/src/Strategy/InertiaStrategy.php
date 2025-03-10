@@ -40,12 +40,12 @@ class InertiaStrategy extends JsonStrategy
         /** @var ?GenericHeader $inertiaHeader */
         $inertiaHeader = $request->getHeaders()->get('X-Inertia');
         if ($inertiaHeader instanceof GenericHeader && $inertiaHeader->getFieldValue() == 'true') {
+            // this does not work properly
             $model->setTerminal(true);
-            //var_dump('json_renderer');
+
             return $this->jsonRenderer;
         }
 
-        //var_dump('php renderer');
         return $this->phpRenderer;
     }
 }
